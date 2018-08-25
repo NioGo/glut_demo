@@ -1,6 +1,7 @@
 #include <glut.h>
 
 void display(void) {
+	glClearColor(0.5, 0.5, 0.5, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0f, 0.3f, 1.0f);
 	glRectf(-0.5f, -0.5f, 0.5f, 0.5f);  // 画矩形
@@ -29,6 +30,21 @@ void display(void) {
 	glVertex2f(0.0f, -1.0f);
 	glVertex2f(1.0f, 0.0f);
 	glEnd();
+
+	// 循环打点
+	glPointSize(3.0f);
+	glColor3f(1.0f, 1.0f, 0.0f);
+	glBegin(GL_POINTS);
+	GLfloat incre = 0.2f;
+	GLfloat originx = -1.0f;
+	GLfloat originy = -1.0f;
+	for (int i = 0; i < 10; ++i) {
+		glVertex2f(originx, originy);
+		originx += incre;
+		originy += incre;
+	}
+	glEnd();
+	
 
 	glFlush();
 }
