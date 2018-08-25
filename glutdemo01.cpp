@@ -4,11 +4,11 @@ void display(void) {
 	glClearColor(0.5, 0.5, 0.5, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(0.0f, 0.3f, 1.0f);
-	glRectf(-0.5f, -0.5f, 0.5f, 0.5f);  // »­¾ØÐÎ
+	glRectf(-0.5f, -0.5f, 0.5f, 0.5f);  // ç”»çŸ©å½¢
 	glPointSize(5.0f);
 	glColor3f(1.0f, 0.0f, 0.0f);
 
-	// ´òµã
+	// æ‰“ç‚¹
 	glBegin(GL_POINTS);
 	glVertex2f(0.0f, 0.0f);
 	glVertex2f(-0.5f, -0.5f);
@@ -17,7 +17,7 @@ void display(void) {
 	glVertex2f(0.5f, 0.5f);
 	glEnd();
 
-	// »­Ïß
+	// ç”»çº¿
 	glLineWidth(2.0f);
 	glColor3f(0.0f, 1.0f, 1.0f);
 	glBegin(GL_LINES);
@@ -31,14 +31,14 @@ void display(void) {
 	glVertex2f(1.0f, 0.0f);
 	glEnd();
 
-	// Ñ­»·´òµã
+	// å¾ªçŽ¯æ‰“ç‚¹
 	glPointSize(3.0f);
 	glColor3f(1.0f, 1.0f, 0.0f);
 	glBegin(GL_POINTS);
 	GLfloat incre = 0.2f;
 	GLfloat originx = -1.0f;
 	GLfloat originy = -1.0f;
-	for (int i = 0; i < 10; ++i) {
+	for (int i = 0; i < 11; ++i) {
 		glVertex2f(originx, originy);
 		originx += incre;
 		originy += incre;
@@ -54,7 +54,7 @@ int main(int argc, char *argv[]) {
 	glutInitDisplayMode(GLUT_RGB | GLUT_SINGLE);
 	glutInitWindowPosition(300, 300);
 	glutInitWindowSize(300, 300);
-	glutCreateWindow("µÚÒ»¸öOpenGL³ÌÐò");
+	glutCreateWindow("ç¬¬ä¸€ä¸ªOpenGLç¨‹åº");
 	glutDisplayFunc(&display);
 	glutMainLoop();
 	return 0;
